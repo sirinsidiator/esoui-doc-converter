@@ -1,0 +1,46 @@
+{
+    "templateFile": "xsdTemplate.xml",
+    "containers": ["Controls", "Callbacks", "AnimationTimeline", "Animations"],
+    "others": ["Font", "String"],
+    "ignoredChildElements": {
+        "sentinel_element": true
+    },
+    "parentTypeRename": {
+        "AnimationBase": "AnimationBaseType",
+        "Control": "ControlType"
+    },
+    "attributeTypeRename": {
+        "ButtonState": "ButtonStateType"
+    },
+    "elementNameRename": {
+        "OnPlay_Animation": "OnPlay",
+        "OnStop_Animation": "OnStop"
+    },
+    "ignoredElements": {
+        "bool": true,
+        "integer": true,
+        "number": true,
+        "string": true,
+        "LuaVariable": true,
+        "MapArrowType": true,
+        "sentinel_element": true
+    },
+    "enumPrefixes": {
+        "AnchorConstrains": "ANCHOR_CONSTRAINS_",
+        "AnimationPlayback": "ANIMATION_PLAYBACK_",
+        "BarAlignment": "BAR_ALIGNMENT_",
+        "ButtonStateType": "BSTATE_",
+        "ControlAccessControl": "CONTROL_ACCESS_",
+        "ControlOrientation": "ORIENTATION_",
+        "DrawLayer": "DL_",
+        "MapDisplayPinType": "MAP_PIN_TYPE_",
+        "MapPinAnimationTarget": "PIN_ANIMATION_TARGET_",
+        "ModifyTextType": "MODIFY_TEXT_TYPE_",
+        "ShapeType": "SHAPE_",
+        "TextAlignment": "TEXT_ALIGN_",
+        "TextWrapMode": "TEXT_WRAP_MODE_",
+        "TextureAddressMode": "TEX_MODE_",
+        "TextureBlendMode": "TEX_BLEND_MODE_",
+        "TextureSampleProcessing": "TEX_SAMPLE_PROCESSING_"
+    }
+}

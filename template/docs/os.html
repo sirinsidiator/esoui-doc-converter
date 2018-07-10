@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li><a href="debug.html">debug</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="math.html">math</a></li>
+					<li>os</li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>os</code></h1>
+   
+<p>Operating System Facilities.</p>
+
+   
+<p>This library is implemented through table os. </p>
+
+	<h2><a id="#(os)" >Type <code>os</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).clock">os.clock()</a></td>
+		<td class="summary">
+<p>Returns an approximation of the amount in seconds of CPU time used by
+the program.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).date">os.date(format, time)</a></td>
+		<td class="summary">
+<p>Returns a string or a table containing date and time, formatted according
+to the given string <code>format</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).difftime">os.difftime(t2, t1)</a></td>
+		<td class="summary">
+<p>Returns the number of seconds from time <code>t1</code> to time <code>t2</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).time">os.time(table)</a></td>
+		<td class="summary">
+<p>Returns the current time when called without arguments, or a time
+representing the date and time specified by the given table.</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(os)" >Type <code>os</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(os).clock" >
+<strong>os.clock()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns an approximation of the amount in seconds of CPU time used by
+the program.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+the amount in seconds of CPU time used by
+the program.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).date" >
+<strong>os.date(format, time)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns a string or a table containing date and time, formatted according
+to the given string <code>format</code>.</p>
+
+	
+
+<p>If the <code>time</code> argument is present, this is the time to be formatted
+(see the <code>os.time</code> function for a description of this value). Otherwise,
+<code>date</code> formats the current time.</p>
+
+<p>If <code>format</code> starts with '<code>!</code>', then the date is formatted in Coordinated
+Universal Time. After this optional character, if <code>format</code> is the string
+"<code>*t</code>", then <code>date</code> returns a table with the following fields:</p>
+
+<ul>
+    <li><code>year</code> (four digits)</li>
+    <li><code>month</code> (1--12)</li>
+    <li><code>day</code> (1--31)</li>
+    <li><code>hour</code> (0--23)</li>
+    <li><code>min</code> (0--59)</li>
+    <li><code>sec</code> (0--61)</li>
+    <li><code>wday</code> (weekday, Sunday is 1)</li>
+    <li><code>yday</code> (day of the year)</li>
+    <li><code>isdst</code> (daylight saving flag, a boolean).</li>
+</ul>
+
+<p>If <code>format</code> is not "<code>*t</code>", then <code>date</code> returns the date as a string,
+formatted according to the same rules as the C function <code>strftime</code>.
+When called without arguments, <code>date</code> returns a reasonable date and time
+representation that depends on the host system and on the current locale
+(that is, <code>os.date()</code> is equivalent to <code>os.date("%c")</code>).</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string format </em></code>: 
+format of date. (optional)</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number time </em></code>: 
+time to format. (default value is current time) </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+a formatted string representation of <code>time</code>. </p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).difftime" >
+<strong>os.difftime(t2, t1)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the number of seconds from time <code>t1</code> to time <code>t2</code>.</p>
+
+	
+<p>In POSIX,
+Windows, and some other systems, this value is exactly <code>t2</code><em>-</em><code>t1</code>.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number t2 </em></code>: </p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number t1 </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+the number of seconds from time <code>t1</code> to time <code>t2</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).time" >
+<strong>os.time(table)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the current time when called without arguments, or a time
+representing the date and time specified by the given table.</p>
+
+	
+<p>This table
+must have fields <code>year</code>, <code>month</code>, and <code>day</code>, and may have fields <code>hour</code>,
+<code>min</code>, <code>sec</code>, and <code>isdst</code> (for a description of these fields, see the
+<code>os.date</code> function).</p>
+
+<p>The returned value is a number, whose meaning depends on your system. In
+POSIX, Windows, and some other systems, this number counts the number
+of seconds since some given start time (the "epoch"). In other systems,
+the meaning is not specified, and the number returned by <code>time</code> can be
+used only as an argument to <code>date</code> and <code>difftime</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#table table </em></code>: 
+a table which describes a date.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+a number meaning a date.</p>
+
+
+</dd>
+</dl>
+
+</div>
+
+</div>
+</body>
+</html>

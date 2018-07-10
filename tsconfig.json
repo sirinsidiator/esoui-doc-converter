@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "lib": [
+            "dom",
+            "es6"
+        ],
+        "target": "es6",
+        "module": "commonjs",
+        "outDir": "bin"
+    },
+    "files": [
+        "src/types.ts",
+        "src/docParser.ts",
+        "src/eeGenerator.ts",
+        "src/xsdGenerator.ts",
+        "src/main.ts"
+    ]
+}

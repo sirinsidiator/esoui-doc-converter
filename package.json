@@ -1,0 +1,12 @@
+{
+  "name": "esoui-doc-converter",
+  "homepage": "https://github.com/sirinsidiator/esoui-doc-converter",
+  "private": true,
+  "dependencies": {
+    "archiver": "^2.1.1",
+    "xmldom": "^0.1.27"
+  },
+  "devDependencies": {
+    "@types/node": "^10.5.2"
+  }
+}

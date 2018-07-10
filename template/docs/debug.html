@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li>debug</li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="math.html">math</a></li>
+					<li><a href="os.html">os</a></li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>debug</code></h1>
+   
+<p>The Debug Library.</p>
+
+   
+<p>This library provides the functionality of the debug interface to Lua programs.
+You should exert care when using this library.
+The functions provided here should be used exclusively for debugging and similar tasks,
+such as profiling.
+Please resist the temptation to use them as a usual programming tool:
+they can be very slow. Moreover, several of these functions violate some assumptions 
+about Lua code (e.g., that variables local to a function cannot be accessed from outside 
+or that userdata metatables cannot be changed by Lua code) and therefore can compromise
+otherwise secure code.</p>
+
+<p>All functions in this library are provided inside the debug table.
+All functions that operate over a thread have an optional first argument
+which is the thread to operate over. The default is always the current thread. </p>
+
+	<h2><a id="#(debug)" >Type <code>debug</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(debug).traceback">debug.traceback()</a></td>
+		<td class="summary">
+<p>ESO specific function. Returns the stack trace for the line from which it is called.</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(debug)" >Type <code>debug</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(debug).traceback" >
+<strong>debug.traceback()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>ESO specific function. Returns the stack trace for the line from which it is called.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+the stack trace for the current line of code.</p>
+
+
+</dd>
+</dl>
+
+</div>
+
+</div>
+</body>
+</html>
