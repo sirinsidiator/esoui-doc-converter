@@ -7,6 +7,6 @@
     "xmldom": "^0.1.27"
   },
   "devDependencies": {
-    "@types/node": "^10.5.2"
+    "@types/node": "^10.14.7"
   }
 }
