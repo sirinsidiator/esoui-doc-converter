@@ -25,4 +25,4 @@ More information about the structure:
 * https://wiki.eclipse.org/LDT/User_Area/Documentation_Language
 
 ## XML Schema
-This file can be used by any IDE that supports xsd files to validate and autocomplete the XML used by ESO. You can find more information at https://sir.insidi.at/or/2018/07/10/schema-definition-for-esoui-xml/‎
+This file can be used by any IDE that supports xsd files to validate and autocomplete the XML used by ESO. You can find more information at https://sir.insidi.at/or/2018/07/10/schema-definition-for-esoui-xml/
