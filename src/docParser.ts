@@ -5,6 +5,7 @@ import { EsoUIType, EsoUIArgument, EsoUIFunction, EsoUIFunctionAccessFromValue, 
 enum ReaderState {
     UNDETERMINED,
     READ_API_VERSION,
+    READ_VM_FUNCTIONS,
     READ_GLOBALS,
     READ_GAME_API,
     READ_OBJECT_API,
@@ -49,6 +50,8 @@ export class EsoUIDocumentationParser {
     findNextState(): ReaderState {
         if (this.lineStartsWith("{TOC:maxLevel")) {
             return ReaderState.READ_API_VERSION;
+        } else if (this.lineStartsWith("h2. VM Functions")) {
+            return ReaderState.READ_VM_FUNCTIONS;
         } else if (this.lineStartsWith("h2. Global Variables")) {
             return ReaderState.READ_GLOBALS;
         } else if (this.lineStartsWith("h2. Game API")) {
@@ -250,6 +253,7 @@ export class EsoUIDocumentationParser {
             case ReaderState.READ_GLOBALS:
                 finished = this.readGlobals();
                 break;
+            case ReaderState.READ_VM_FUNCTIONS:
             case ReaderState.READ_GAME_API:
                 finished = this.readGameApi();
                 break;
