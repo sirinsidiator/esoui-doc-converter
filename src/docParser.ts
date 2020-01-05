@@ -290,6 +290,10 @@ export class EsoUIDocumentationParser {
         registerForEvent.addArgument("callback", "function");
         registerForEvent.addReturn("success", "bool");
 
+        let registerForAllEvents = new EsoUIFunction("RegisterForAllEvents");
+        registerForAllEvents.addArgument("namespace", "string");
+        registerForAllEvents.addArgument("callback", "function");
+
         let unregisterForEvent = new EsoUIFunction("UnregisterForEvent");
         unregisterForEvent.addArgument("namespace", "string");
         unregisterForEvent.addArgument("event", "integer");
@@ -315,6 +319,7 @@ export class EsoUIDocumentationParser {
 
         let eventManager = new EsoUIObject("EventManager");
         eventManager.addFunction(registerForEvent);
+        eventManager.addFunction(registerForAllEvents);
         eventManager.addFunction(unregisterForEvent);
         eventManager.addFunction(addFilterForEvent);
         eventManager.addFunction(registerForUpdate);
