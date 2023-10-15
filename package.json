@@ -3,10 +3,10 @@
   "homepage": "https://github.com/sirinsidiator/esoui-doc-converter",
   "private": true,
   "dependencies": {
-    "archiver": "^2.1.1",
-    "xmldom": "^0.1.27"
+    "archiver": "^6.0.1",
+    "xmldom": "^0.6.0"
   },
   "devDependencies": {
-    "@types/node": "^10.14.7"
+    "@types/node": "^20.8.6"
   }
 }
