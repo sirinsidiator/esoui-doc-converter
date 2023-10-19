@@ -16,6 +16,14 @@
         </xs:union>
     </xs:simpleType>
 
+    <xs:simpleType name="layout_measurement">
+        <xs:union>
+            <xs:simpleType>
+                <xs:restriction base="xs:integer" />
+            </xs:simpleType>
+        </xs:union>
+    </xs:simpleType>
+
     <xs:simpleType name="number">
         <xs:union>
             <xs:simpleType>
